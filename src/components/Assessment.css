@@ -1,0 +1,188 @@
+/* Base Container Styling */
+.assessment-widget {
+  font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+/* Heading */
+.assessment-widget h2 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Tabs */
+.assessment-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  background: transparent;
+  border: none;
+  color: #666;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.tab-button:hover,
+.tab-button.active {
+  color: #007bff;
+  border-bottom: 3px solid #007bff;
+  font-weight: 600;
+}
+
+/* Controls Section */
+.assessment-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  flex: 1;
+  max-width: 280px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.new-assessment-button {
+  padding: 12px 20px;
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.new-assessment-button:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+/* Assessment List */
+.assessment-list {
+  background-color: #f9f9f9;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.assessment-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.assessment-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.assessment-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.assessment-info {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.assessment-info strong {
+  display: block;
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.assessment-info span {
+  display: block;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.assessment-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.assessment-actions button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.assessment-actions button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .assessment-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-input {
+    max-width: 100%;
+  }
+
+  .assessment-actions {
+    flex-direction: row;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 576px) {
+  .tab-button {
+    font-size: 0.9rem;
+  }
+
+  .new-assessment-button {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+  
+}

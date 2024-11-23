@@ -1,0 +1,247 @@
+/* General Layout */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f7fa;
+}
+
+/* Dashboard Container */
+/* Dashboard Container */
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  color: #2c3e50;
+  transition: all 0.3s ease;
+}
+
+/* Sidebar */
+.sidebar {
+  flex: 0 0 240px; /* Fix width of the sidebar */
+  background: linear-gradient(180deg, #004d61, #007b8f);
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  position: sticky; /* Stick sidebar to the viewport */
+  top: 0;
+  z-index: 1; /* Ensure it doesn’t get hidden */
+}
+
+/* Main Content */
+.main-content {
+  flex: 1; /* Takes the remaining width */
+  padding: 30px;
+  background-color: #f4f6f9;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.sidebar h3 {
+  margin: 0 0 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 15px 20px;
+  margin: 5px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar li:hover,
+.sidebar li.active {
+  background-color: #36cfc9;
+  color: white;
+  transform: scale(1.05);
+}
+
+
+
+/* Header Section */
+.header {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.header h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.cta-banner {
+  background: #36cfc9;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  text-align: right;
+  font-size: 1rem;
+  min-width: 200px;
+}
+
+.cta-button {
+  background: white;
+  color: #36cfc9;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #e5f7f6;
+  color: #007b8f;
+}
+
+/* Content Sections */
+.content-sections {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* Recent Activity Section */
+.recent-activity {
+  flex: 2;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.recent-activity h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.recent-activity ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recent-activity li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+.recent-activity li span {
+  flex: 1;
+}
+
+.activity-type {
+  font-weight: bold;
+  color: #36cfc9;
+}
+
+.email {
+  color: #7f8c8d;
+  text-align: center;
+}
+
+.timestamp {
+  text-align: right;
+  color: #bdc3c7;
+}
+
+/* Metrics Section */
+.metrics {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.metric-card {
+  background: white;
+  flex: 1 1 calc(50% - 10px);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.metric-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.metric-card h4 {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.metric-card p {
+  font-size: 2rem;
+  color: #36cfc9;
+  font-weight: bold;
+  margin: 0;
+}
+
+.metric-card span {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .sidebar h3 {
+    font-size: 1.2rem;
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .sidebar li {
+    padding: 10px;
+    margin: 0;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+  .content-sections {
+    flex-direction: column;
+  }
+}
